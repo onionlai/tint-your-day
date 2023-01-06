@@ -1,0 +1,58 @@
+type Mutation {
+    signUp(input: SignUpInput!): AuthUser!
+    signIn(input: SignInInput!): AuthUser!
+    createJournal(drawingImage: Upload): Journal
+    deleteJournal(id: ID): Boolean
+    addJournalContent(id: ID, content: String): [Content]
+    deleteJournalContent(id: ID, contentID: ID): [Content]
+    updateJournalImage(id: ID, drawingImage: Upload): Journal
+}
+
+type Query {
+    getJournalList: [Journal]
+    getJournalContents(id: ID): [Content]
+    getUserInfo: User
+}
+
+input SignUpInput {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input SignInInput {
+    email: String!
+    password: String!
+}
+
+type AuthUser {
+    user: User!
+    token: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
+
+type JournalList {
+    id: ID
+    date: DateTime
+    contentSummary: String
+    drawingImage: String
+}
+
+type Journal {
+    id: ID
+    date: DateTime
+    contents: [Content]
+    drawingImage: String
+    shown: Boolean
+}
+
+type Content {
+    id: ID,
+    date: DateTime
+    content: String
+}

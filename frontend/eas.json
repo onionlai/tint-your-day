@@ -1,0 +1,20 @@
+{
+  "cli": {
+    "version": ">= 3.1.1"
+  },
+  "build": {
+    "preview-android": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview-ios": {
+      "ios": {
+        "simulator": true
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
