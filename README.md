@@ -17,7 +17,7 @@ Watch my [5-min presentation](https://youtu.be/onMap3v3LhU)(in Mandarin) for mor
 - Frontend: 
     - Run ```yarn start```
     - Open an android simulator or use a mobile phone to scan the QR code on the terminal.
-    - The app will connect to our server by default. If you want to run on your server, follow the next step. (Notes: Default server running at NTU CSIE Workstation only has a 2GB limit, and might be close in the future.)
+    - The app will connect to our server by default. If you want to run on your server, follow the next step. (Notes: Default server running at NTU CSIE Workstation has a 2GB limit, and might be closed in the future.)
 
 - Backend: 
     - Setup global variables: MONGO_URL, JWT_SECRET(a random string. this is for creating tokens), PORT and BASE_URL. You can put them in a single ```.env``` file in ```backend/```.
